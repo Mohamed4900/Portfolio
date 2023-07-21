@@ -1,0 +1,107 @@
+/* Navbar.css */
+
+.navbar {
+  background-color: black;
+  color: white;
+  padding: 2rem;
+}
+
+.link-navbar {
+  color: white;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-item {
+  margin-left: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-item::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #fff;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-item:hover::before {
+  width: 100%;
+}
+
+.h1-navbar {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.h2-navbar {
+  text-align: center;
+  margin-top: 0;
+}
+
+/* Add a slide-in animation to the navbar */
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.navbar {
+  animation: slideInFromTop 0.8s ease-in-out both;
+}
+
+/* Add a bounce effect to the list items on hover */
+@keyframes bounceEffect {
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.nav-item:hover {
+  animation: bounceEffect 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+/* New style for the list items */
+.nav-item {
+  padding: 8px 12px;
+  border-radius: 20px;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Align the list to the right */
+.navbar ul {
+  margin-left: auto;
+}
+
+.deco {
+  width: 50px;
+}
+
+.Sign {
+  margin-left: 45%;
+  background-color: white;
+  width: 200px;
+  border-radius: 40%;
+}

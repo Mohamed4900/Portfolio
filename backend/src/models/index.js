@@ -29,11 +29,35 @@ pool.getConnection().catch(() => {
 
 const models = {};
 
-const ItemManager = require("./ItemManager");
+const UserManager = require("./UserManager");
 
-models.item = new ItemManager();
-models.item.setDatabase(pool);
+models.user = new UserManager();
+models.user.setDatabase(pool);
 
+const ProjectManager = require("./ProjectManager");
+
+models.project = new ProjectManager();
+models.project.setDatabase(pool);
+
+const InternshipManager = require("./InternshipManager");
+
+models.internship = new InternshipManager();
+models.internship.setDatabase(pool);
+
+const SkillManager = require("./SkillManager");
+
+models.skill = new SkillManager();
+models.skill.setDatabase(pool);
+
+const LangageManager = require("./LangageManager");
+
+models.langage = new LangageManager();
+models.langage.setDatabase(pool);
+
+const HobbieManager = require("./HobbieManager");
+
+models.hobbie = new HobbieManager();
+models.hobbie.setDatabase(pool);
 // bonus: use a proxy to personalize error message,
 // when asking for a non existing model
 
